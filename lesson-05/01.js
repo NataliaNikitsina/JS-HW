@@ -21,8 +21,6 @@ const game = {
         return this.resources[key] += amount
       }
     }
-    return "Invalid resource"
+    console.log("Invalid resource");
   }
 }
-
-console.log(game.addResource('lumber', 50))
