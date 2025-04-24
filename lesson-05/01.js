@@ -15,5 +15,14 @@ const game = {
     gold: 250,
     lumber: 100,
   },
-  addResource() {}
+  addResource(resource, amount) {
+    for (let key in this.resources) {
+      if (key === resource) {
+        return this.resources[key] += amount
+      }
+    }
+    return "Invalid resource"
+  }
 }
+
+console.log(game.addResource('lumber', 50))
