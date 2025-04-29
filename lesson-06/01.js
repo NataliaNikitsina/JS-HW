@@ -19,23 +19,23 @@ const WEB_TECH_IMAGES = [
 ]
 const prevButton = document.querySelector('#prev-button')
 const nextButton = document.querySelector('#next-button')
-const imagePrev = document.querySelector('#web-tech-image');
+const imageMain = document.querySelector('#web-tech-image');
 
 nextButton.addEventListener('click', function () {
-  let indexSrc = WEB_TECH_IMAGES.indexOf(imagePrev.getAttribute('src'))
+  let indexSrc = WEB_TECH_IMAGES.indexOf(imageMain.getAttribute('src'))
   if (!(indexSrc === WEB_TECH_IMAGES.length - 1)) {
-    imagePrev.setAttribute('src', WEB_TECH_IMAGES[indexSrc + 1]);
+    imageMain.setAttribute('src', WEB_TECH_IMAGES[indexSrc + 1]);
   } else {
-    imagePrev.setAttribute('src', WEB_TECH_IMAGES[0])
+    imageMain.setAttribute('src', WEB_TECH_IMAGES[0])
   }
 });
 
 prevButton.addEventListener('click', function () {
-  let indexSrc = WEB_TECH_IMAGES.indexOf(imagePrev.getAttribute('src'))
+  let indexSrc = WEB_TECH_IMAGES.indexOf(imageMain.getAttribute('src'))
   if (indexSrc > 0) {
-    imagePrev.setAttribute('src', WEB_TECH_IMAGES[indexSrc - 1]);
+    imageMain.setAttribute('src', WEB_TECH_IMAGES[indexSrc - 1]);
   } else {
-    imagePrev.setAttribute('src', WEB_TECH_IMAGES.at(-1))
+    imageMain.setAttribute('src', WEB_TECH_IMAGES.at(-1))
   }
 });
 
