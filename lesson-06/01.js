@@ -23,7 +23,7 @@ const imagePrev = document.querySelector('#web-tech-image');
 
 nextButton.addEventListener('click', function () {
   let indexSrc = WEB_TECH_IMAGES.indexOf(imagePrev.getAttribute('src'))
-  if (indexSrc < WEB_TECH_IMAGES.length - 1) {
+  if (!(indexSrc === WEB_TECH_IMAGES.length - 1)) {
     imagePrev.setAttribute('src', WEB_TECH_IMAGES[indexSrc + 1]);
   } else {
     imagePrev.setAttribute('src', WEB_TECH_IMAGES[0])
