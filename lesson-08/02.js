@@ -39,7 +39,7 @@ startButton.addEventListener('click', () => {
     countdownDisplay.textContent = `${counter}`
     timerId = setInterval(() => {
       counter -= 1
-      if (counter <= 3 && counter > 0) {
+      if (counter > 0) {
         countdownDisplay.textContent = `${counter}`
       } else if (counter === 0) {
         countdownDisplay.textContent = `🚀`
