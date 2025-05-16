@@ -67,19 +67,13 @@ clearCartButton.addEventListener('click', function () {
   updateCartDisplay()
 })
 
-petShop.addEventListener('click', (event) => {
-  const wantedPet = event.target.id
+petShop.addEventListener('click', function (event) {
   if (cart.length < 3) {
-    cart.push(wantedPet)
+    const boughtPet = event.target.id;
+    cart.push(boughtPet);
+    updateCartDisplay();
   } else {
-    messageBox.textContent = 'Вы не можете добавить более 3 питомцев'
+    messageBox.textContent = 'Вы не можете добавить более 3 питомцев';
   }
-  for (let i = 0; i < cart.length; i++) {
-    const boughtPet = document.createElement('li')
-    boughtPet.classList.add('pet')
-    boughtPet.id = cart[i].id
-    boughtPet.textContent = cart[i].title
-    cartList.append(boughtPet)
-  }
-  updateCartDisplay()
-})
+  // }
+});
